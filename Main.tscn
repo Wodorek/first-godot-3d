@@ -18,4 +18,4 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.939154, 0.00958496, -0.343362, 0.343496, -0.0262063, 0.938789, 0, -0.999611, -0.0279042, 0, 38, 0 )
+transform = Transform( 0.829506, 0.0155844, -0.558281, 0.558498, -0.0231467, 0.829183, 0, -0.999611, -0.0279042, 0, 35, 0 )
