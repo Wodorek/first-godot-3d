@@ -17,8 +17,8 @@ albedo_color = Color( 0.784314, 0.690196, 0.0941176, 1 )
 
 [sub_resource type="Curve3D" id=5]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -14.4611, 0, -11.1888, 0, 0, 0, 0, 0, 0, 13.9541, 0, -11.2181, 0, 0, 0, 0, 0, 0, 13.9588, 0, 20.0755, 0, 0, 0, 0, 0, 0, -14.3965, 0, 19.9757, 0, 0, 0, 0, 0, 0, -14.4611, 0, -11.1888, 0, 0, 0, 0, 0, 0, 2.37705, 0, -2.78837 ),
-"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0 )
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -17, 0, -14, 0, 0, 0, 0, 0, 0, 17, 0, -14, 0, 0, 0, 0, 0, 0, 17, 0, 25, 0, 0, 0, 0, 0, 0, -17, 0, 25, 0, 0, 0, 0, 0, 0, -17, 0, -14 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0 )
 }
 
 [node name="Main" type="Node"]
@@ -42,7 +42,7 @@ visible = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.285879, 0 )
 
 [node name="Position3D" type="Position3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 27, 19 )
+transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 24.3564, 16.3272 )
 
 [node name="Camera" type="Camera" parent="Position3D"]
 transform = Transform( 1, 0, 0, 0, 1, -1.49012e-07, 0, 1.49012e-07, 1, 0, 1.0718, 17.8564 )
@@ -76,3 +76,9 @@ curve = SubResource( 5 )
 
 [node name="SpawnLocation" type="PathFollow" parent="SpawnPath"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4611, 0, -11.1888 )
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]

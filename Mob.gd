@@ -14,7 +14,7 @@ func initialize(start_position:Vector3, player_position:Vector3):
 	
 	var random_speed:float = rand_range(min_speed, max_speed)
 	velocity = Vector3.FORWARD * random_speed
-	velocity.rotated(Vector3.UP, rotation.y)
+	velocity = velocity.rotated(Vector3.UP, rotation.y)
 
 
 func _on_VisibilityNotifier_screen_exited():
